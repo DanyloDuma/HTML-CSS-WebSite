@@ -122,6 +122,10 @@ body {
   font-size: 1em;
 }
 
+.tips-section p {
+  font-size: 1.1em;
+  color: #333;
+}
 
 fieldset {
   display: block;
