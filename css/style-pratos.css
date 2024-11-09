@@ -1,215 +1,295 @@
 /* Estilo do body */
 body {
-  background-image: url('../img/maca.jpg');
+  background-image: url('../img/maca.jpg'); /* Definindo a imagem de fundo */
   background-size: cover; /* Ajusta a imagem para cobrir toda a página */
   background-repeat: no-repeat; /* Impede que a imagem se repita */
   background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Evita rolagem horizontal */
+  font-family: 'Poppins', Arial, Helvetica, sans-serif; /* Define a fonte */
+  margin: 0; /* Remove a margem padrão */
+  padding: 0; /* Remove o padding padrão */
+  overflow-x: hidden; /* Impede rolagem horizontal */
+}
+
+/* Estilos gerais para parágrafos e listas */
+p, li {
+  text-align: justify; /* Alinha o texto ao justificar */
+  font-size: 25px; /* Tamanho de fonte para melhor leitura */
+}
+
+center {
+  font-size: 25px; /* Ajusta o tamanho da fonte para elementos centralizados */
 }
 
 /* Estilo da barra de menu */
 .navbar {
-  display: flex;
+  display: flex; /* Utiliza layout flexível */
   justify-content: space-between; /* Centraliza os botões e coloca a barra de pesquisa à direita */
-  align-items: center;
-  padding: 10px 20px;
-  background: linear-gradient(90deg, #8b0000, #b22222); /* Gradiente vermelho */
-  color: #fff;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-  min-height: 50px;
-  flex-wrap: wrap; /* Permite quebra de linha se o conteúdo for muito grande */
-  /* Removido overflow: hidden; para permitir que o dropdown fique visível */
+  align-items: center; /* Alinha os itens ao centro */
+  padding: 10px 20px; /* Adiciona padding ao menu */
+  background: linear-gradient(90deg, #8b0000, #b22222); /* Fundo com gradiente vermelho */
+  color: #fff; /* Cor do texto */
+  position: fixed; /* Fixa o menu no topo */
+  width: 100%; /* Largura total */
+  top: 0; /* Fixa no topo da tela */
+  left: 0; /* Fixa à esquerda */
+  z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
+  min-height: 50px; /* Altura mínima */
+  flex-wrap: wrap; /* Permite quebra de linha se necessário */
 }
 
 /* Estilo das opções do menu */
 .navbar-menu {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap; /* Permite que os itens se reorganizem em telas menores */
-  margin-left: 10px;
+  display: flex; /* Layout flexível */
+  gap: 20px; /* Espaçamento entre itens */
+  flex-wrap: wrap; /* Permite reorganização em telas menores */
+  margin-left: 10px; /* Margem à esquerda */
 }
 
 .navbar-menu a {
-  color: #f86f57;
-  text-decoration: none;
-  font-size: 18px; /* Fonte ajustada para melhor responsividade */
-  font-weight: 500;
-  position: relative;
-  transition: color 0.3s ease-in-out;
+  color: #f86f57; /* Cor do texto dos links */
+  text-decoration: none; /* Remove sublinhado */
+  font-size: 18px; /* Ajuste no tamanho da fonte para responsividade */
+  font-weight: 500; /* Peso da fonte */
+  position: relative; /* Necessário para o efeito do hover */
+  transition: color 0.3s ease-in-out; /* Transição de cor suave */
 }
 
 /* Efeito ao passar o mouse */
 .navbar-menu a::before {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%) scaleX(0);
-  width: 100%;
-  height: 2px;
-  background-color: #e60000;
-  transition: transform 0.3s ease;
+  content: ""; /* Cria uma linha antes do texto */
+  position: absolute; /* Posiciona a linha abaixo do texto */
+  bottom: -5px; /* Define a distância da linha até o texto */
+  left: 50%; /* Centraliza a linha */
+  transform: translateX(-50%) scaleX(0); /* Reduz o tamanho da linha */
+  width: 100%; /* Largura total */
+  height: 2px; /* Espessura da linha */
+  background-color: #e60000; /* Cor da linha */
+  transition: transform 0.3s ease; /* Efeito de transição */
 }
 
 .navbar-menu a:hover {
-  color: #ff4500;
+  color: #ff4500; /* Cor dos links ao passar o mouse */
 }
 
 .navbar-menu a:hover::before {
-  transform: translateX(-50%) scaleX(1);
+  transform: translateX(-50%) scaleX(1); /* Expande a linha ao passar o mouse */
 }
 
 /* Estilo para o item de menu ativo */
 .navbar-menu a.active {
-  color: #ff4500;
-  font-weight: bold;
+  color: #ff4500; /* Cor para o item ativo */
+  font-weight: bold; /* Deixa o item ativo em negrito */
 }
 
-/* Compensa a altura da barra para que o conteúdo não fique oculto */
+/* Compensando a altura da barra fixa */
 .content {
-  margin-top: 70px; /* Aumenta a margem para compensar a barra fixa */
+  margin-top: 90px; /* Ajuste para compensar a altura da barra */
 }
 
-/* Estilos para as novas seções */
+/* Estilo da seção hero */
 .hero-section {
-  background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 10px;
-  text-align: center;
+  background: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+  padding: 20px; /* Espaçamento interno */
+  margin: 20px auto; /* Margem automática para centralizar */
+  border-radius: 10px; /* Bordas arredondadas */
+  text-align: center; /* Centraliza o conteúdo */
   max-width: 1200px; /* Limita a largura máxima */
 }
 
 .hero-section h1 {
-  color: #8b0000;
-  font-size: 2.5em;
+  color: #8b0000; /* Cor do título */
+  font-size: 2.5em; /* Tamanho do título */
 }
 
 .hero-section p {
-  font-size: 1.2em;
-  color: #333;
+  font-size: 15px; /* Tamanho do texto */
+  color: #333; /* Cor do texto */
 }
 
+/* Estilo para seções de informações e dicas */
 .info-section, .tips-section {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 15px;
-  margin: 20px auto;
-  border-radius: 10px;
-  max-width: 1200px; /* Limita a largura máxima */
+  background: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
+  padding: 15px; /* Espaçamento interno */
+  margin: 20px auto; /* Margem automática para centralizar */
+  border-radius: 10px; /* Bordas arredondadas */
+  max-width: 1200px; /* Largura máxima */
+  display: flex; /* Layout flexível */
+  align-items: center; /* Alinha os itens verticalmente */
+  gap: 20px; /* Espaçamento entre texto e imagem */
 }
 
 .info-section h2, .tips-section h2 {
-  color: #b22222;
-  font-size: 2em;
+  color: #b22222; /* Cor dos subtítulos */
+  font-size: 2em; /* Tamanho da fonte */
+}
+
+.info-section p {
+  font-size: 23px; /* Tamanho do texto */
+  color: #333; /* Cor do texto */
+  margin: 0; /* Remove margem */
+}
+
+.info-section img {
+  width: 250px; /* Tamanho da imagem */
+  height: auto; /* Mantém as proporções da imagem */
+  border-radius: 8px; /* Bordas arredondadas */
 }
 
 .info-section ul {
-  margin-left: 20px;
-  list-style-type: disc;
-  color: #444;
+  margin-left: 20px; /* Margem à esquerda para lista */
+  list-style-type: disc; /* Define o estilo da lista */
+  color: #444; /* Cor dos itens da lista */
 }
 
 .info-section li {
-  margin-bottom: 10px;
-  font-size: 1em;
-}
-
-.tips-section p {
-  font-size: 1.1em;
-  color: #333;
+  margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+  font-size: 1em; /* Tamanho da fonte */
 }
 
 fieldset {
-  display: block;
-  color: #b22222;
-  border: 5px dashed;
+  display: block; /* Define como bloco */
+  color: #b22222; /* Cor do texto */
+  border: 5px dashed; /* Borda tracejada */
 }
 
 /* Estilo da barra de pesquisa */
 .search-bar {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  margin-left: auto; /* Alinha a barra de pesquisa à direita */
-  margin-right: 20px;
+  display: flex; /* Layout flexível */
+  align-items: center; /* Alinha os itens verticalmente */
+  flex-shrink: 0; /* Impede o encolhimento */
+  margin-left: auto; /* Alinha à direita */
+  margin-right: 20px; /* Margem à direita */
 }
 
 .search-bar input {
-  width: 200px;
-  padding: 5px 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-right: 5px;
-  outline: none;
+  width: 200px; /* Largura do campo de busca */
+  padding: 5px 10px; /* Espaçamento interno */
+  border: 1px solid #ccc; /* Borda do campo */
+  border-radius: 5px; /* Bordas arredondadas */
+  margin-right: 5px; /* Espaço entre campo e botão */
+  outline: none; /* Remove o contorno de foco */
 }
 
 .search-bar button {
-  background-color: #b22222;
-  border: none;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
+  background-color: #b22222; /* Cor de fundo do botão */
+  border: none; /* Remove borda */
+  color: #fff; /* Cor do texto do botão */
+  padding: 5px 10px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Define o cursor como pointer */
 }
 
 .search-bar button:hover {
-  background-color: #8b0000;
+  background-color: #8b0000; /* Cor de fundo ao passar o mouse */
 }
 
-/* Estilo do dropdown */
+/* Estilo para o dropdown */
 .navbar .dropdown {
-  position: relative;
-  display: inline-block;
-  color: #f86f57;
-  font-size: 18px; /* Fonte ajustada para melhor responsividade */
-  font-weight: 500;
-  z-index: 1001;
-  transition: color 0.3s ease-in-out;
+  position: relative; /* Define a posição relativa para o dropdown */
+  display: inline-block; /* Exibe o dropdown como inline */
+  color: #f86f57; /* Cor do texto */
+  font-size: 18px; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+  z-index: 1001; /* Garante que o dropdown fique sobre os outros elementos */
+  transition: color 0.3s ease-in-out; /* Transição suave de cor */
 }
 
 .navbar .dropdown .dropbtn {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 18px; /* Fonte ajustada para melhor responsividade */
-  font-weight: 500;
-  transition: color 0.3s ease-in-out;
+  background-color: transparent; /* Fundo transparente para o botão */
+  border: none; /* Remove borda */
+  cursor: pointer; /* Define o cursor como pointer */
+  font-size: 18px; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+  transition: color 0.3s ease-in-out; /* Transição suave de cor */
 }
 
 .navbar .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1002; /* Certifique-se de que o dropdown apareça acima de outros elementos */
-  overflow: visible;
+  display: none; /* Esconde o conteúdo do dropdown */
+  position: absolute; /* Define a posição absoluta */
+  background-color: #f9f9f9; /* Cor de fundo do dropdown */
+  min-width: 160px; /* Largura mínima */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Sombra do dropdown */
+  z-index: 1002; /* Garante que o dropdown apareça sobre outros elementos */
+  overflow: visible; /* Mantém o conteúdo visível */
 }
 
 .navbar .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+  color: black; /* Cor dos links no dropdown */
+  padding: 12px 16px; /* Espaçamento interno */
+  text-decoration: none; /* Remove sublinhado */
+  display: block; /* Exibe os links em bloco */
 }
 
 .navbar .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background-color: #f1f1f1; /* Fundo ao passar o mouse */
 }
 
 /* Mostrar o dropdown ao passar o mouse */
 .navbar .dropdown:hover .dropdown-content {
-  display: block;
+  display: block; /* Exibe o conteúdo do dropdown */
 }
 
 .navbar .dropdown:hover .dropbtn {
-  background-color: #ddd;
+  background-color: #ddd; /* Fundo do botão ao passar o mouse */
+}
+
+/* Estilos do Footer */
+.footer {
+  background: linear-gradient(90deg, #8b0000, #b22222); /* Fundo com gradiente */
+  color: #ffffff; /* Cor do texto */
+  padding: 0px 0; /* Reduz o padding */
+  text-align: bottom; /* Alinhamento central */
+}
+
+.footer-content {
+  display: flex; /* Layout flexível */
+  justify-content: space-around; /* Espaço entre os elementos */
+  flex-wrap: wrap; /* Permite quebra de linha */
+  max-width: 1200px; /* Largura máxima */
+}
+
+.footer-bottom {
+  background: #8b0000; /* Cor do fundo da barra inferior */
+  color: #ffffff; /* Cor do texto */
+  padding: 10px 0; /* Padding reduzido */
+  font-size: 10px; /* Tamanho da fonte */
+  text-align: bottom; /* Alinha o texto ao fundo */
+}
+
+.content2 {
+  margin-top: 90px; /* Compensa a altura da barra fixa */
+}
+
+/* Estilo da seção hero 2 */
+.hero-section2 {
+  background: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+  padding: 20px; /* Espaçamento interno */
+  margin: 20px auto; /* Margem automática */
+  border-radius: 10px; /* Bordas arredondadas */
+  text-align: center; /* Centraliza o texto */
+  max-width: 1200px; /* Limita a largura máxima */
+  display: flex; /* Utiliza Flexbox */
+  justify-content: space-between; /* Espaçamento entre as colunas */
+}
+
+.hero-left, .hero-right {
+  flex: 1; /* Cada div ocupa metade do espaço */
+  padding: 20px; /* Adiciona padding interno */
+  text-align: center; /* Alinha o texto ao centro */
+  border-radius: 10px; /* Bordas arredondadas */
+  background: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+}
+
+.hero-left {
+  margin-right: 10px; /* Espaçamento entre as colunas */
+}
+
+.hero-right {
+  margin-left: 10px; /* Espaçamento entre as colunas */
+}
+
+.hero-section2 h2 {
+  color: #8b0000; /* Cor do título */
+  font-size: 2em; /* Tamanho do título */
 }

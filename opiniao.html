@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/style-opiniao.css">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <title>Opinião</title> <!-- Título da página -->
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <!-- Opções de menu à direita -->
+    <div class="navbar-menu">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="maca.html" class="dropbtn">Maçã</a>
+        <div class="dropdown-content">
+          <a href="historia.html">História</a>
+          <a href="ciencia.html">Ciência</a>
+          <a href="bensesaude.html">Bens e Saúde</a>
+        </div>
+      </div>
+      <a href="pratos.html">Pratos</a>
+      <a href="autoria.html">Autoria</a>
+      <a href="opiniao.html" class="active">Opinião</a>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Pesquisar...">
+      <button type="submit">🔍</button>
+    </div>
+
+  </nav>
+
+  <div class="content">
+    <section class="hero-section">
+      <fieldset>
+          <marquee behavior="alternate" direction="left">
+            <h1>Precisamos da sua opinião!</h1>
+          </marquee>
+      </fieldset>
+    </section>
+    
+    <section class="hero-section">
+      <div class="form-container">
+        <fieldset>
+            <h1>Formulário de Opinião</h1>
+            <form>
+                <label>Gostaste do site?</label><br>
+                <select>
+                    <option>Seleciona uma opção</option>
+                    <option>Sim</option>
+                    <option>Não</option>
+                </select><br><br>
+
+                <label>O que achas que falta no site?</label><br>
+                <textarea rows="3"></textarea><br><br>
+
+                <label>Gostas de maçã?</label><br>
+                <select>
+                    <option>Seleciona uma opção</option>
+                    <option>Sim</option>
+                    <option>Não</option>
+                </select><br><br>
+
+                <label>Escreve o teu nome</label><br>
+                <input type="text"><br><br>
+
+                <label>Insere o teu email</label><br>
+                <input type="email"><br><br>
+
+                <button type="submit"><a href="404.html">Submeter</a></button>
+            </form>
+        </fieldset>
+      </div>
+    </section>
+    
+    <footer class="footer">
+      <div class="footer-bottom">
+        <p>&copy; 2024 Maçã | Desenvolvido pelo Danylo Duma - 2ºGI - TGPSI - RC - 2024/2025</p>
+      </div>
+    </footer>
+</body>
+</html>

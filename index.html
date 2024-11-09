@@ -1,51 +1,85 @@
+<!-- Página principal -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/style-index.css">
-  <script src="js/script-index.js"></script>
-  <title>Página principal</title>
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <title>Página principal</title> <!-- Título da página -->
 </head>
 <body>
-  <nav class="navbar" id="navbar">
-    <!-- Opções de menu à direita -->
-    <div class="navbar-menu">
-      <a href="index.html" class="active">Home</a>
-      <div class="dropdown">
-        <a href="maca.html" class="dropbtn">Maçã</a>
-        <div class="dropdown-content">
-          <a href="historia.html">História</a>
-          <a href="ciencia.html">Ciência</a>
-          <a href="bensesaude.html">Bens e Saúde</a>
+  <nav class="navbar" id="navbar"> <!-- Barra de navegação fixa no topo -->
+    <div class="navbar-menu"> <!-- Menu principal da navegação -->
+      <a href="index.html" class="active">Home</a> <!-- Link para a página inicial (Home) -->
+      <div class="dropdown"> <!-- Menu suspenso (dropdown) para a seção Maçã -->
+        <a href="maca.html" class="dropbtn">Maçã</a> <!-- Link para a página principal da maçã -->
+        <div class="dropdown-content"> <!-- Conteúdo do menu suspenso (sub-links para a maçã) -->
+          <a href="historia.html">História</a> <!-- Link para a página de História da maçã -->
+          <a href="ciencia.html">Ciência</a> <!-- Link para a página sobre Ciência da maçã -->
+          <a href="bensesaude.html">Bens e Saúde</a> <!-- Link para a página sobre benefícios e saúde -->
         </div>
       </div>
-      <a href="pratos.html">Pratos</a>
-      <a href="autoria.html">Autoria</a>
+      <a href="pratos.html">Pratos</a> <!-- Link para a página de pratos -->
+      <a href="autoria.html">Autoria</a> <!-- Link para a página de autoria -->
+      <a href="opiniao.html">Opinião</a> <!-- Link para a página de opinião -->
     </div>
-
-    <div class="search-bar">
-      <input type="text" placeholder="Pesquisar...">
-      <button type="submit">🔍</button>
+    <div class="search-bar"> <!-- Barra de pesquisa -->
+      <input type="text" placeholder="Pesquisar..."> <!-- Campo de texto para pesquisa -->
+      <button type="submit">🔍</button> <!-- Botão para submeter a pesquisa -->
     </div>
 
   </nav>
 
-  <div class="content">
-    <section class="hero-section">
-      <fieldset>
-          <h1>Bem-vindo!</h1>
+  <div class="content"> <!-- Seção principal do conteúdo -->
+    <section class="hero-section"> <!-- Seção de boas-vindas (hero section) -->
+      <fieldset> <!-- Campo de formulário usado para estilização (não tem efeito funcional aqui) -->
+          <marquee behavior="alternate" direction="left"> <!-- Efeito de texto rolando -->
+            <h1>Bem-vindo!</h1> <!-- Título de boas-vindas -->
+          </marquee>
       </fieldset>
     </section>
 
-    <section class="info-section">
-      <h2>Curiosidades sobre Maçãs</h2>
-      <ul>
-        <li><strong>Variedade Incrível:</strong> Existem mais de 7.500 variedades de maçãs em todo o mundo.</li>
-        <li><strong>Nutrientes Essenciais:</strong> Elas são ricas em fibra, vitamina C e antioxidantes que ajudam na saúde do coração.</li>
-        <li><strong>Cultura Popular:</strong> A maçã é um símbolo em contos como o da Branca de Neve e em histórias da mitologia grega.</li>
-      </ul>
+    <section class="info-section"> <!-- Seção de informações sobre a maçã -->
+      <div>
+        <h2>Início</h2> <!-- Subtítulo para a seção de introdução -->
+        <p>
+          <strong>
+            Este site irá falar sobre uma fruta que é comumente consumida diariamente, a maçã.
+            A maçã é uma das frutas mais consumidas no mundo, 
+            conhecida tanto pelo seu sabor refrescante como pelos seus benefícios para a saúde. 
+            <br><br>
+            Ela é rica em fibras, vitaminas e antioxidantes, 
+            a maçã é uma escolha popular para quem procura uma alimentação equilibrada. 
+            Seja vermelha, verde ou amarela, esta fruta pode ser apreciada de diversas formas: 
+            fresca, em sumos, sobremesas, saladas e até mesmo em receitas salgadas.
+          </strong>
+        </p>
+      </div>
+      <img src="img/favpng_apple-wallpaper.png" alt="Imagem de maçã"> <!-- Imagem ilustrativa da maçã -->
     </section>
-  </div>
+
+    <section class="info-section"> <!-- Seção sobre o contexto da escola -->
+      <div>
+        <h2>Escola</h2> <!-- Subtítulo para a seção da escola -->
+        <p>
+          <strong>
+            Este site foi construído no âmbito da disciplina de <u>Redes de Comunicação</u>, com o 
+            objetivo de avaliar os módulos M4(HTML) e M5(CSS) dos alunos do curso e, além disso, 
+            aplicar os conhecimentos que foram fornecidos nas aulas para o uso em futuros projetos.
+          </strong>
+      </p>
+      </div>
+    </section>
+
+    <footer class="footer"> <!-- Rodapé da página -->
+      <div class="footer-bottom"> <!-- Parte inferior do rodapé -->
+        <p>&copy; 2024 Maçã | Desenvolvido pelo Danylo Duma - 2ºGI - TGPSI - RC - 2024/2025</p> <!-- Texto de copyright e crédito de autoria -->
+      </div>
+    </footer>
 </body>
 </html>

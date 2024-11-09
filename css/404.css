@@ -1,0 +1,254 @@
+/* Estilo do body */
+body {
+  background-image: url('../img/maca.jpg'); /* Define uma imagem de fundo */
+  background-size: cover; /* Ajusta a imagem para cobrir toda a página */
+  background-repeat: no-repeat; /* Impede que a imagem se repita */
+  background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+  font-family: 'Poppins', Arial, Helvetica, sans-serif; /* Define a fonte para o corpo da página */
+  margin: 0; /* Remove a margem padrão */
+  padding: 0; /* Remove o padding padrão */
+  overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+/* Estilos para os parágrafos */
+p {
+  text-align: justify; /* Justifica o texto para uma melhor leitura */
+  font-size: 25px; /* Define o tamanho da fonte */
+}
+
+/* Estilos para a barra de navegação */
+.navbar {
+  display: flex; /* Define layout flexível */
+  justify-content: space-between; /* Espaça os itens entre si, com um ao final */
+  align-items: center; /* Alinha verticalmente ao centro */
+  padding: 10px 20px; /* Define espaçamento interno */
+  background: linear-gradient(90deg, #8b0000, #b22222); /* Aplica gradiente vermelho de fundo */
+  color: #fff; /* Define a cor do texto */
+  position: fixed; /* Fixa a barra ao topo da página */
+  width: 100%; /* Largura total da página */
+  top: 0; /* Posiciona a barra no topo */
+  left: 0; /* Alinha a barra à esquerda */
+  z-index: 1000; /* Garante que a barra fique acima de outros elementos */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); /* Aplica sombra para profundidade */
+  min-height: 50px; /* Define altura mínima da barra */
+  flex-wrap: wrap; /* Permite quebra de linha para conteúdo grande */
+}
+
+/* Estilos para as opções do menu */
+.navbar-menu {
+  display: flex; /* Define layout flexível para o menu */
+  gap: 20px; /* Espaça itens entre si */
+  flex-wrap: wrap; /* Permite quebra de linha para telas menores */
+  margin-left: 10px; /* Define margem à esquerda */
+}
+
+.navbar-menu a {
+  color: #f86f57; /* Define cor dos links */
+  text-decoration: none; /* Remove sublinhado dos links */
+  font-size: 18px; /* Ajusta tamanho da fonte */
+  font-weight: 500; /* Define espessura da fonte */
+  position: relative; /* Define posição relativa para efeitos */
+  transition: color 0.3s ease-in-out; /* Anima a transição de cor */
+}
+
+/* Efeito ao passar o mouse */
+.navbar-menu a::before {
+  content: ""; /* Cria um conteúdo vazio para o efeito */
+  position: absolute; /* Posiciona elemento abaixo do link */
+  bottom: -5px; /* Define posição na parte inferior */
+  left: 50%; /* Centraliza o efeito horizontalmente */
+  transform: translateX(-50%) scaleX(0); /* Define efeito inicial */
+  width: 100%; /* Define a largura do efeito */
+  height: 2px; /* Define a altura do efeito */
+  background-color: #e60000; /* Define a cor do efeito */
+  transition: transform 0.3s ease; /* Anima o efeito de transformação */
+}
+
+.navbar-menu a:hover {
+  color: #ff4500; /* Altera a cor ao passar o mouse */
+}
+
+.navbar-menu a:hover::before {
+  transform: translateX(-50%) scaleX(1); /* Expande o efeito ao passar o mouse */
+}
+
+/* Estilo para o item de menu ativo */
+.navbar-menu a.active {
+  color: #ff4500; /* Destaca o item ativo */
+  font-weight: bold; /* Aumenta a espessura do texto */
+}
+
+/* Ajuste de margem para compensar a altura da barra fixa */
+.content {
+  margin-top: 90px; /* Define margem superior para compensar a barra fixa */
+}
+
+/* Estilos para a seção hero */
+.hero-section {
+  background: rgba(255, 255, 255, 0.8); /* Define fundo branco com opacidade */
+  padding: 20px; /* Define espaçamento interno */
+  margin: 20px auto; /* Define margem superior e inferior e centraliza horizontalmente */
+  border-radius: 10px; /* Aplica bordas arredondadas */
+  text-align: center; /* Centraliza o texto */
+  max-width: 1200px; /* Limita a largura máxima da seção */
+}
+
+.hero-section h1 {
+  color: #8b0000; /* Define cor para o título */
+  font-size: 2.5em; /* Define o tamanho do título */
+}
+
+.hero-section p {
+  font-size: 15px; /* Define o tamanho da fonte para o parágrafo */
+  color: #333; /* Define a cor do texto */
+}
+
+.info-section, .tips-section {
+  background: rgba(255, 255, 255, 0.9); /* Define um fundo branco semi-transparente */
+  padding: 15px; /* Adiciona espaçamento interno */
+  margin: 20px auto; /* Define a margem para separar e centralizar as seções */
+  border-radius: 10px; /* Aplica bordas arredondadas */
+  max-width: 1200px; /* Limita a largura máxima das seções */
+  display: flex; /* Aplica layout flexível */
+  align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+  gap: 20px; /* Define o espaçamento entre o texto e a imagem */
+}
+
+.info-section h2, .tips-section h2 {
+  color: #b22222; /* Define a cor dos títulos */
+  font-size: 2em; /* Define o tamanho da fonte dos títulos */
+}
+
+.info-section p {
+  font-size: 23px; /* Define o tamanho da fonte dos parágrafos */
+  color: #333; /* Define a cor dos parágrafos */
+  margin: 0; /* Remove margem extra */
+}
+
+.info-section img {
+  width: 250px; /* Define a largura da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 8px; /* Aplica bordas arredondadas na imagem */
+  align-items: right; /* Alinha a imagem à direita */
+}
+
+.info-section ul {
+  margin-left: 20px; /* Define margem à esquerda para listas */
+  list-style-type: disc; /* Estilo de lista com marcadores */
+  color: #444; /* Define a cor dos marcadores */
+}
+
+.info-section li {
+  margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+  font-size: 1em; /* Define o tamanho da fonte dos itens */
+}
+
+fieldset {
+  display: block; /* Define exibição em bloco para o fieldset */
+  color: #b22222; /* Define a cor do texto dentro do fieldset */
+  border: 5px dashed; /* Aplica borda tracejada */
+}
+
+/* Estilos para a barra de pesquisa */
+.search-bar {
+  display: flex; /* Aplica layout flexível para a barra de pesquisa */
+  align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+  flex-shrink: 0; /* Impede que a barra diminua em largura */
+  margin-left: auto; /* Move a barra de pesquisa para a direita */
+  margin-right: 20px; /* Define margem à direita da barra */
+}
+
+.search-bar input {
+  width: 200px; /* Define a largura do campo de entrada */
+  padding: 5px 10px; /* Define espaçamento interno */
+  border: 1px solid #ccc; /* Adiciona borda cinza */
+  border-radius: 5px; /* Aplica bordas arredondadas */
+  margin-right: 5px; /* Espaço entre o campo de entrada e o botão */
+  outline: none; /* Remove contorno padrão */
+}
+
+.search-bar button {
+  background-color: #b22222; /* Define a cor de fundo do botão */
+  border: none; /* Remove a borda do botão */
+  color: #fff; /* Define a cor do texto do botão */
+  padding: 5px 10px; /* Adiciona espaçamento interno */
+  border-radius: 5px; /* Aplica bordas arredondadas ao botão */
+  cursor: pointer; /* Adiciona cursor de ponteiro ao passar sobre o botão */
+}
+
+.search-bar button:hover {
+  background-color: #8b0000; /* Muda a cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilos para o dropdown no menu */
+.navbar .dropdown {
+  position: relative; /* Define posição relativa para o dropdown */
+  display: inline-block; /* Exibe o dropdown ao lado de outros elementos */
+  color: #f86f57; /* Define a cor do texto do dropdown */
+  font-size: 18px; /* Ajusta o tamanho da fonte */
+  font-weight: 500; /* Define o peso da fonte */
+  z-index: 1001; /* Garante que o dropdown apareça acima de outros elementos */
+  transition: color 0.3s ease-in-out; /* Anima a transição de cor */
+}
+
+.navbar .dropdown .dropbtn {
+  background-color: transparent; /* Fundo transparente para o botão dropdown */
+  border: none; /* Remove a borda do botão */
+  cursor: pointer; /* Define o cursor de ponteiro */
+  font-size: 18px; /* Ajusta o tamanho da fonte */
+  font-weight: 500; /* Define o peso da fonte */
+  transition: color 0.3s ease-in-out; /* Anima a transição de cor */
+}
+
+.navbar .dropdown-content {
+  display: none; /* Oculta o conteúdo do dropdown por padrão */
+  position: absolute; /* Exibe o conteúdo abaixo do botão */
+  background-color: #f9f9f9; /* Fundo branco para o dropdown */
+  min-width: 160px; /* Define a largura mínima do dropdown */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Aplica sombra ao dropdown */
+  z-index: 1002; /* Garante que o dropdown esteja acima de outros elementos */
+  overflow: visible; /* Permite que o conteúdo do dropdown seja visível */
+}
+
+.navbar .dropdown-content a {
+  color: black; /* Define a cor dos links no dropdown */
+  padding: 12px 16px; /* Adiciona espaçamento aos links */
+  text-decoration: none; /* Remove a decoração do texto */
+  display: block; /* Exibe os links em bloco */
+}
+
+.navbar .dropdown-content a:hover {
+  background-color: #f1f1f1; /* Muda o fundo ao passar o mouse sobre os links */
+}
+
+/* Exibe o dropdown ao passar o mouse */
+.navbar .dropdown:hover .dropdown-content {
+  display: block; /* Exibe o conteúdo do dropdown ao passar o mouse */
+}
+
+.navbar .dropdown:hover .dropbtn {
+  background-color: #ddd; /* Muda o fundo do botão ao passar o mouse */
+}
+
+/* Estilos para o footer */
+.footer {
+  background: linear-gradient(90deg, #8b0000, #b22222); /* Fundo gradiente vermelho */
+  color: #ffffff; /* Define a cor do texto */
+  padding: 0px 0; /* Reduz o padding para tornar o footer mais compacto */
+  text-align: bottom; /* Centraliza o conteúdo horizontalmente */
+}
+
+.footer-content {
+  display: flex; /* Aplica layout flexível para o conteúdo */
+  justify-content: space-around; /* Espaça o conteúdo ao redor */
+  flex-wrap: wrap; /* Permite quebra de linha para telas menores */
+  max-width: 1200px; /* Limita a largura máxima do conteúdo */
+}
+
+.footer-bottom {
+  background: #8b0000; /* Define a cor de fundo da barra inferior */
+  color: #ffffff; /* Define a cor do texto */
+  padding: 10px 0; /* Reduz o padding para diminuir a altura */
+  font-size: 10px; /* Define o tamanho da fonte para legibilidade */
+  text-align: bottom; /* Mete o texto em baixo */
+}

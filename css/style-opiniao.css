@@ -1,0 +1,304 @@
+/* Estilo do body */
+body {
+  background-image: url('../img/maca.jpg'); /* Define a imagem de fundo */
+  background-size: cover; /* Ajusta a imagem para cobrir toda a página */
+  background-repeat: no-repeat; /* Impede que a imagem se repita */
+  background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+  font-family: 'Poppins', Arial, Helvetica, sans-serif; /* Define a fonte usada na página */
+  margin: 0; /* Remove a margem padrão */
+  padding: 0; /* Remove o padding padrão */
+  overflow-x: hidden; /* Impede rolagem horizontal */
+}
+
+/* Parágrafos */
+p {
+  text-align: justify; /* Alinha o texto de forma justificada */
+  font-size: 25px; /* Define o tamanho da fonte */
+}
+
+/* Estilo da barra de menu */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Centraliza os botões e coloca a barra de pesquisa à direita */
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #8b0000, #b22222); /* Gradiente vermelho */
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); /* Sombra da barra de navegação */
+  min-height: 50px; /* Altura mínima da barra */
+  flex-wrap: wrap; /* Permite quebra de linha se o conteúdo for muito grande */
+}
+
+/* Estilo das opções do menu */
+.navbar-menu {
+  display: flex;
+  gap: 20px; /* Espaço entre os itens do menu */
+  flex-wrap: wrap; /* Permite que os itens se reorganizem em telas menores */
+  margin-left: 10px;
+}
+
+.navbar-menu a {
+  color: #f86f57; /* Cor dos links do menu */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  font-size: 18px; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+  position: relative;
+  transition: color 0.3s ease-in-out; /* Transição suave para a cor */
+}
+
+/* Efeito ao passar o mouse */
+.navbar-menu a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0); /* Efeito de linha abaixo do link */
+  width: 100%;
+  height: 2px;
+  background-color: #e60000; /* Cor da linha */
+  transition: transform 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  color: #ff4500; /* Cor do link ao passar o mouse */
+}
+
+.navbar-menu a:hover::before {
+  transform: translateX(-50%) scaleX(1); /* Expande a linha quando o link é hover */
+}
+
+/* Estilo para o item de menu ativo */
+.navbar-menu a.active {
+  color: #ff4500; /* Cor do item ativo */
+  font-weight: bold; /* Deixa o item ativo em negrito */
+}
+
+/* Compensa a altura da barra para que o conteúdo não fique oculto */
+.content {
+  margin-top: 90px; /* Ajusta a margem para compensar a barra fixa */
+}
+
+/* Estilos para as novas seções */
+.hero-section {
+  background: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+  padding: 20px;
+  margin: 20px auto; /* Margem automática para centralizar */
+  border-radius: 10px; /* Bordas arredondadas */
+  text-align: center; /* Alinha o texto ao centro */
+  max-width: 1200px; /* Limita a largura máxima */
+}
+
+.hero-section h1 {
+  color: #8b0000; /* Cor do título */
+  font-size: 2.5em; /* Tamanho da fonte do título */
+}
+
+.hero-section p {
+  font-size: 15px; /* Tamanho da fonte do parágrafo */
+  color: #333; /* Cor do texto */
+}
+
+.info-section, .tips-section {
+  background: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 10px; /* Bordas arredondadas */
+  max-width: 1200px; /* Limita a largura máxima */
+  display: flex;
+  align-items: center; /* Alinha verticalmente os itens */
+  gap: 20px; /* Espaço entre o texto e a imagem */
+}
+
+.info-section h2, .tips-section h2 {
+  color: #b22222; /* Cor dos títulos */
+  font-size: 2em; /* Tamanho do título */
+}
+
+.info-section p {
+  font-size: 23px; /* Tamanho da fonte do parágrafo */
+  color: #333; /* Cor do texto */
+  margin: 0; /* Remove a margem */
+}
+
+.info-section img {
+  width: 250px; /* Define a largura da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 8px; /* Bordas arredondadas */
+}
+
+.info-section ul {
+  margin-left: 20px; /* Margem à esquerda para a lista */
+  list-style-type: disc; /* Estilo da lista como pontos */
+  color: #444; /* Cor dos itens da lista */
+}
+
+.info-section li {
+  margin-bottom: 10px; /* Espaço entre os itens da lista */
+  font-size: 1em; /* Tamanho da fonte da lista */
+}
+
+fieldset {
+  display: block;
+  color: #b22222; /* Cor do título do fieldset */
+  border: 5px dashed; /* Borda tracejada */
+}
+
+/* Estilo da barra de pesquisa */
+.search-bar {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: auto; /* Alinha a barra de pesquisa à direita */
+  margin-right: 20px;
+}
+
+.search-bar input {
+  width: 200px; /* Largura do campo de input */
+  padding: 5px 10px; /* Espaçamento interno */
+  border: 1px solid #ccc; /* Cor da borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  margin-right: 5px;
+  outline: none; /* Remove o contorno padrão */
+}
+
+.search-bar button {
+  background-color: #b22222; /* Cor do botão */
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer; /* Cursor de clique */
+}
+
+.search-bar button:hover {
+  background-color: #8b0000; /* Cor do botão ao passar o mouse */
+}
+
+/* Estilo do dropdown */
+.navbar .dropdown {
+  position: relative;
+  display: inline-block;
+  color: #f86f57; /* Cor do dropdown */
+  font-size: 18px; /* Tamanho da fonte */
+  font-weight: 500;
+  z-index: 1001; /* Garante que o dropdown fique sobre outros elementos */
+  transition: color 0.3s ease-in-out; /* Transição suave */
+}
+
+.navbar .dropdown .dropbtn {
+  background-color: transparent; /* Sem fundo para o botão */
+  border: none;
+  cursor: pointer;
+  font-size: 18px; /* Tamanho da fonte */
+  font-weight: 500;
+  transition: color 0.3s ease-in-out; /* Transição suave */
+}
+
+.navbar .dropdown-content {
+  display: none; /* Inicialmente oculto */
+  position: absolute;
+  background-color: #f9f9f9; /* Cor do fundo do dropdown */
+  min-width: 160px; /* Largura mínima do dropdown */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Sombra do dropdown */
+  z-index: 1002; /* Garante que o dropdown apareça acima de outros elementos */
+  overflow: visible;
+}
+
+.navbar .dropdown-content a {
+  color: black; /* Cor dos links dentro do dropdown */
+  padding: 12px 16px; /* Espaçamento interno dos links */
+  text-decoration: none; /* Remove sublinhado */
+  display: block; /* Exibe os links em bloco */
+}
+
+.navbar .dropdown-content a:hover {
+  background-color: #f1f1f1; /* Fundo ao passar o mouse */
+}
+
+/* Mostrar o dropdown ao passar o mouse */
+.navbar .dropdown:hover .dropdown-content {
+  display: block; /* Exibe o conteúdo do dropdown */
+}
+
+.navbar .dropdown:hover .dropbtn {
+  background-color: #ddd; /* Fundo do botão ao passar o mouse */
+}
+
+/* Estilos do Footer */
+.footer {
+  background: linear-gradient(90deg, #8b0000, #b22222); /* Gradiente do fundo */
+  color: #ffffff; /* Cor do texto */
+  padding: 0px 0; /* Reduz o padding para tornar o footer mais compacto */
+  text-align: bottom; /* Alinha o conteúdo horizontalmente */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around; /* Espaço entre os itens */
+  flex-wrap: wrap; /* Permite que o conteúdo se ajuste em telas menores */
+  max-width: 1200px; /* Limita a largura máxima */
+}
+
+.footer-bottom {
+  background: #8b0000; /* Cor de fundo da barra inferior */
+  color: #ffffff; /* Cor do texto */
+  padding: 10px 0; /* Ajuste no padding */
+  font-size: 10px; /* Tamanho da fonte */
+  text-align: bottom; /* Centraliza o texto */
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
+  padding: 15px;
+  margin: 20px auto; /* Centraliza a caixa */
+  border-radius: 10px; /* Bordas arredondadas */
+  max-width: 1200px; /* Limita a largura máxima */
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 20px; /* Espaço entre o texto e a imagem */
+  text-align: center; /* Alinha o texto ao centro */
+}
+
+.form-container h1 {
+  color: #800000; /* Cor do título */
+  margin-bottom: 20px; /* Espaço abaixo do título */
+  font-size: 24px; /* Tamanho da fonte do título */
+}
+
+.form-container select,
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+  width: 90%; /* Largura dos campos de input */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc; /* Cor da borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: 16px; /* Tamanho da fonte */
+}
+
+.form-container input[type="submit"] {
+  background-color: #800000; /* Cor do botão de submit */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* Cursor de clique */
+  font-size: 16px; /* Tamanho da fonte */
+}
+
+.form-container input[type="submit"]:hover {
+  background-color: #a50000; /* Cor do botão ao passar o mouse */
+}
+
+.form-container fieldset {
+  display: block;
+  color: #b22222; /* Cor do título do fieldset */
+  border: 5px dashed; /* Borda tracejada */
+}
