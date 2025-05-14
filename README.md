@@ -18,24 +18,24 @@ Este repositório contém o código-fonte de um site simples construído exclusi
 
 A estrutura básica do projeto é a seguinte:
 
-HTML-CSS-WebSite/
-├── css/                 # Pasta para arquivos CSS (Estilos do site)
-├── favicon/             # Pasta para o ícone do site (favicon)
-├── img/                 # Pasta para arquivos de imagem
-├── .hintrc              # Arquivo de configuração
-├── 404.html             # Página de erro
-├── LICENSE              # Arquivo com a informação da licença do projeto
-├── README.md            # Arquivo de descrição do projeto
-├── autoria.html         # autor
-├── bensesaude.html      # bem-estar e saúde
-├── ciencia.html         # ciência
-├── historia.html        # história
-├── index.html           # A página inicial do site
-├── maca.html            # maçã
-├── opiniao.html         # opinião
-├── pratos.html          # pratos
-├── projectofinal_danyloduma.docx # Documento do projeto (Word)
-└── projectofinal_danyloduma.pdf  # Documento do projeto (PDF)
+HTML-CSS-WebSite/<br>
+├── css/                 # Pasta para arquivos CSS (Estilos do site) <br>
+├── favicon/             # Pasta para o ícone do site (favicon)<br>
+├── img/                 # Pasta para arquivos de imagem<br>
+├── .hintrc              # Arquivo de configuração<br>
+├── 404.html             # Página de erro<br>
+├── LICENSE              # Arquivo com a informação da licença do projeto<br>
+├── README.md            # Arquivo de descrição do projeto<br>
+├── autoria.html         # autor<br>
+├── bensesaude.html      # bem-estar e saúde<br>
+├── ciencia.html         # ciência<br>
+├── historia.html        # história<br>
+├── index.html           # A página inicial do site<br>
+├── maca.html            # maçã<br>
+├── opiniao.html         # opinião<br>
+├── pratos.html          # pratos<br>
+├── projectofinal_danyloduma.docx # Documento do projeto (Word)<br>
+└── projectofinal_danyloduma.pdf  # Documento do projeto (PDF)<br>
 
 ## Como Usar Localmente
 
@@ -43,7 +43,7 @@ Siga estes passos para obter uma cópia local do projeto e executá-lo:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/DanyloDuma/HTML-CSS-WebSite.git](https://github.com/DanyloDuma/HTML-CSS-WebSite.git)
+    git clone https://github.com/DanyloDuma/HTML-CSS-WebSite.git
     ```
 2.  **Navegue até o diretório do projeto:**
     ```bash
@@ -64,11 +64,8 @@ Se você quiser contribuir para este projeto, por favor:
 
 ## Licença
 
-Este projeto está sob a licença [Nome da Licença, Ex: MIT License]. Veja o arquivo [Nome do Arquivo da Licença, Ex: LICENSE] para mais detalhes.
--->
+Este projeto está sob a licença [MIT License]. Veja o arquivo [LICENSE] para mais detalhes.
 
 ## Autor
 
 - Danylo Duma
-
-```
